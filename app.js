@@ -8,7 +8,7 @@ var port = process.env.PORT || 4201;
 
 var cliente_route = require('./routes/cliente')
 
-mongoose.connect('mongodb://127.0.0.1:27017',(err, res)=>{
+mongoose.connect('mongodb://127.0.0.1:27017/tienda',{useUnifiedTopology: true, useNewUrlParser: true},(err, res)=>{
     if(err){
         console.log(err);
     }else{

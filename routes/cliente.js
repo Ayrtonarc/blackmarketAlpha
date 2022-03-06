@@ -1,10 +1,11 @@
 'use strict'
 
 var express = require('express');
-var ClienteController = require('../controllers/ClienteController');
+var clienteController = require('../controllers/ClienteController');
 
 var api = express.Router();
 
-api.post('/registro_cliente', ClienteController.registro_cliente); //url
+api.post('/registro_cliente', clienteController.registro_cliente); //url
+api.post('/login_cliente', clienteController.login_cliente);
 
 module.exports = api;
